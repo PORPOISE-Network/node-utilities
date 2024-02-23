@@ -1,14 +1,30 @@
 {
-    "name": "utilities",
+    "name": "@zkporpoise/utilities",
     "author": "zkporpoise <zkporpoise@protonmail.com>",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "main": "./dist/utilities.js",
     "types": "./dist/utilities.d.ts",
     "devDependencies": {
         "@types/node": "^20.11.20",
         "typescript": "^5.3.3"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PORPOISE-Network/utilities.git"
+    },
+    "keywords": [
+        "PORPOISE",
+        "surveys",
+        "sha256",
+        "ethereum",
+        "node"
+    ],
+    "license": "MIT",
+    "homepage": "https://porpoise.network",
     "scripts": {
         "build": "tsc --declaration --esModuleInterop"
-    }
+    },
+    "files": [
+        "dist"
+    ]
 }
