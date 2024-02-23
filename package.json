@@ -1,0 +1,14 @@
+{
+    "name": "utilities",
+    "author": "zkporpoise <zkporpoise@protonmail.com>",
+    "version": "1.0.0",
+    "main": "./dist/utilities.js",
+    "types": "./dist/utilities.d.ts",
+    "devDependencies": {
+        "@types/node": "^20.11.20",
+        "typescript": "^5.3.3"
+    },
+    "scripts": {
+        "build": "tsc --declaration --esModuleInterop"
+    }
+}
