@@ -1,14 +1,15 @@
-# 🐬 PORPOISE Network Utility Functions
+# 🐬 PORPOISE Network Node Utilities
 
 This is a super-simple typescript implementation of the functions needed to generate survey roots and prediction commitments
-for PORPOISE. There are no external dependencies. 
+for PORPOISE that are compatible with the [PORPOISE oracle contracts](https://github.com/PORPOISE-Network/oracle-v1). This package
+was designed to have no external dependences. 
 
 See the [PORPOISE survey commitment protocol](https://info.porpoise.network/whitepaper/survey-commitment-protocol) for more information. 
 
 ## Installation
 
 ```sh
-npm install --save-dev @zkporpoise/utilities
+npm install --save-dev @zkporpoise/node-utilities
 ```
 
 ## Import
@@ -20,7 +21,7 @@ import {
   mapBigIntTo256BitNumber,
   computeMerkleRoot,
   convertProofToHex,
-} from "@zkporpoise/utilities"
+} from "@zkporpoise/node-utilities"
 ```
 
 ## Methods

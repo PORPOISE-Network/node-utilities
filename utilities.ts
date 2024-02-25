@@ -13,10 +13,10 @@ export function convertProofToHex(proof: Buffer[], root: Buffer): [`0x${string}`
     return [stringProof, ethHexString(root)];
 }
 
-export function computeMerkleRoot(leafs: Buffer[], proof: Buffer[], tracker: number): [Buffer, Buffer[], number] {
+export function computeMerkleRoot(leafs: Buffer[], proof: Buffer[], tracker: number): [Buffer, Buffer[]] {
     // Base case: if there's only one element, return its hash
     if (leafs.length === 1) {
-        return [leafs[0], proof, tracker];
+        return [leafs[0], proof];
     }
 
     // Recursive case: compute hash of pairs until a single hash is obtained
