@@ -1,7 +1,7 @@
 {
     "name": "@zkporpoise/node-utilities",
     "author": "zkporpoise <zkporpoise@protonmail.com>",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "main": "./dist/utilities.js",
     "types": "./dist/utilities.d.ts",
     "devDependencies": {
