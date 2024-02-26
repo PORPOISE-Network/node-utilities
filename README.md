@@ -26,11 +26,13 @@ import {
 
 ## Methods
 
-- `computeMerkleRoot(leafs: Buffer[], proof: Buffer[], tracker)`: takes output of `padArrayToPowerOfTwo` for leafs, an empty array, and the index of the leaf for which the proof is needed and returns an array containing the proof array, Merkle root, and root index. 
+- `computeMerkleRoot(leafs: Buffer[], proof: Buffer[], tracker: number)`: takes output of `padArrayToPowerOfTwo` for leafs, an empty array, and the index of the leaf for which the proof is needed and returns an array containing the proof array, Merkle root, and root index. The proof and root can be used for registering and resolving survey on the PORPOISE oracle. 
 
 - `padArrayToPowerOfTwo(arr: string[], paddingValue: string)`: given an array of string elements representing a PORPOISE survey, returns sha256-hashed leaf values. Note, that leafs must be given in the order 🐬, ⏰, 🔮, 🗳️1, ... Additionally, the deadline value (⏰) is encoded as 'hex' while all other inputs are 'binary' encoded.
 
-- `mapBigIntTo256BitNumber(bigIntValue: bigint)`: Converts a BigInt into a hex string so that hashes computed offchain will match hashes computed on-chain. 
+- `mapBigIntTo256BitNumber(bigIntValue: bigint)`: Converts a BigInt into a hex string so that hashes computed off-chain will match hashes computed on-chain for integers. 
+
+- `predictionCommitment(salt: string, prediction: string, surveyRoot: Buffer): Buffer`: Used to calculate survey commitments from end-users. 
 
 - `ethHexString(muBuffer: Buffer)`: returns a `0x${string}` type needed for viem
 

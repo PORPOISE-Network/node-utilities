@@ -72,6 +72,26 @@ export function padArrayToPowerOfTwo(arr: string[], paddingValue: string): Buffe
     });
 }
 
+export function predictionCommitment(salt: string, prediction: string, surveyRoot: Buffer): Buffer {
+    const saltBuffer: Buffer = Buffer.from(salt);
+    const predictionBuffer: Buffer = Buffer.from(prediction);
+    return crypto.createHash("sha256").update(
+        Buffer.from(
+            Buffer.concat(
+                [
+                    Buffer.concat(
+                        [
+                            saltBuffer,
+                            predictionBuffer
+                        ]
+                    ),
+                    surveyRoot
+                ]
+            )
+        )
+    ).digest();
+}
+
 export function mapBigIntTo256BitNumber(bigIntValue: bigint): string {
     // Convert the BigInt to a hexadecimal string
     let hexString = bigIntValue.toString(16);
